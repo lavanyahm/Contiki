@@ -74,7 +74,6 @@ MEMB(routememb, uip_ds6_route_t, UIP_DS6_ROUTE_NB);
 
 static int num_routes = 0;
 static void rm_routelist_callback(nbr_table_item_t *ptr);
-
 #endif /* (UIP_CONF_MAX_ROUTES != 0) */
 
 /* Default routes are held on the defaultrouterlist and their
@@ -704,6 +703,7 @@ uip_ds6_defrt_periodic(void)
     if(!d->isinfinite &&
        stimer_expired(&d->lifetime)) {
       PRINTF("uip_ds6_defrt_periodic: defrt lifetime expired\n");
+      printf ("uip_ds6_defrt_periodic uip_ds6_defrt_rm\n");
       uip_ds6_defrt_rm(d);
       d = list_head(defaultrouterlist);
     } else {

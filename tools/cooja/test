@@ -1,0 +1,28 @@
+Buildfile: /home/lavanya/Contiki_Default/contiki/tools/cooja/build.xml
+
+init:
+
+compile:
+
+copy configs:
+
+jar_cooja:
+      [jar] Building jar: /home/lavanya/Contiki_Default/contiki/tools/cooja/dist/cooja.jar
+
+jar:
+
+init:
+
+compile:
+
+jar:
+
+init:
+
+mspsim:
+
+init:
+
+compile:
+
+jar:

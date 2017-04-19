@@ -46,8 +46,7 @@
 #include "net/rpl/rpl-private.h"
 #include "net/nbr-table.h"
 #include "net/link-stats.h"
-
-#define DEBUG DEBUG_NONE
+#define DEBUG DEBUG_PRINT
 #include "net/ip/uip-debug.h"
 
 /* Constants from RFC6552. We use the default values. */
@@ -174,9 +173,11 @@ best_parent(rpl_parent_t *p1, rpl_parent_t *p2)
   p2_is_acceptable = p2 != NULL && parent_is_acceptable(p2);
 
   if(!p1_is_acceptable) {
+      if (p2 == NULL) PRINTF("\nLav P1 NULL ");
     return p2_is_acceptable ? p2 : NULL;
   }
   if(!p2_is_acceptable) {
+      if (p2 == NULL) PRINTF("\nLav P2 NULL ");
     return p1_is_acceptable ? p1 : NULL;
   }
 

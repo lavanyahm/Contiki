@@ -137,6 +137,8 @@ link_stats_packet_sent(const linkaddr_t *lladdr, int status, int numtx)
 
   if(status != MAC_TX_OK && status != MAC_TX_NOACK) {
     /* Do not penalize the ETX when collisions or transmission errors occur. */
+    PRINTF("link_stats_packet_sent: Do not penalize the ETX when collisions or transmission errors occur.\n ");
+  	
     return;
   }
 
@@ -147,6 +149,8 @@ link_stats_packet_sent(const linkaddr_t *lladdr, int status, int numtx)
     if(stats != NULL) {
       stats->etx = LINK_STATS_INIT_ETX(stats);
     } else {
+    
+    PRINTF("link_stats_packet_sent:No space left, return .\n ");
       return; /* No space left, return */
     }
   }
@@ -163,6 +167,8 @@ link_stats_packet_sent(const linkaddr_t *lladdr, int status, int numtx)
   /* Compute EWMA and update ETX */
   stats->etx = ((uint32_t)stats->etx * (EWMA_SCALE - ewma_alpha) +
       (uint32_t)packet_etx * ewma_alpha) / EWMA_SCALE;
+   
+    PRINTF("link_stats_packet_sent:numtx =%d  packet_etx %d stats->etx %d \n ", numtx,packet_etx,stats->etx);
 }
 /*---------------------------------------------------------------------------*/
 /* Packet input callback. Updates statistics for receptions on a given link */
@@ -180,6 +186,7 @@ link_stats_input_callback(const linkaddr_t *lladdr)
       /* Initialize */
       stats->rssi = packet_rssi;
       stats->etx = LINK_STATS_INIT_ETX(stats);
+     PRINTF("link_stats_input_callback : stats != 0: packet_rssi  = %d  stats->etx %d\n ",packet_rssi,stats->etx ); 
     }
     return;
   }
@@ -187,6 +194,8 @@ link_stats_input_callback(const linkaddr_t *lladdr)
   /* Update RSSI EWMA */
   stats->rssi = ((int32_t)stats->rssi * (EWMA_SCALE - EWMA_ALPHA) +
       (int32_t)packet_rssi * EWMA_ALPHA) / EWMA_SCALE;
+  
+  PRINTF("link_stats_input_callback : stats = 0: packet_rssi  = %d  stats->etx %d\n ",packet_rssi,stats->etx ); 
 }
 /*---------------------------------------------------------------------------*/
 /* Periodic timer called every FRESHNESS_HALF_LIFE minutes */

@@ -58,7 +58,7 @@
 #define DEBUG 0
 #if DEBUG
 #include <stdio.h>
-#define PRINTF(...) printf(__VA_ARGS__)
+#define PRINTF(...) PRINTF(__VA_ARGS__)
 #else /* DEBUG */
 #define PRINTF(...)
 #endif /* DEBUG */
@@ -90,7 +90,9 @@
 #ifdef CSMA_CONF_MAX_FRAME_RETRIES
 #define CSMA_MAX_MAX_FRAME_RETRIES CSMA_CONF_MAX_FRAME_RETRIES
 #else
-#define CSMA_MAX_MAX_FRAME_RETRIES 7
+
+/*#define CSMA_MAX_MAX_FRAME_RETRIES 7 Lav changed */
+#define CSMA_MAX_MAX_FRAME_RETRIES 3 
 #endif
 
 /* Packet metadata */
@@ -342,6 +344,9 @@ packet_sent(void *ptr, int status, int num_transmissions)
     return;
   }
 
+ ("******csma.c packet_sent status %d, len %d, num_transmissions %d\n",
+            status, packetbuf_totlen(), num_transmissions);
+
   switch(status) {
   case MAC_TX_OK:
     tx_ok(q, n, num_transmissions);
@@ -382,6 +387,8 @@ send_packet(mac_callback_t sent, void *ptr)
   }
   packetbuf_set_attr(PACKETBUF_ATTR_MAC_SEQNO, seqno++);
 
+  PRINTF ("csma.c : send_packet len %d\n", packetbuf_totlen());
+
   /* Look for the neighbor entry */
   n = neighbor_queue_from_addr(addr);
   if(n == NULL) {
@@ -413,9 +420,11 @@ send_packet(mac_callback_t sent, void *ptr)
             if(packetbuf_attr(PACKETBUF_ATTR_MAX_MAC_TRANSMISSIONS) == 0) {
               /* Use default configuration for max transmissions */
               metadata->max_transmissions = CSMA_MAX_MAX_FRAME_RETRIES + 1;
+              PRINTF ("****max_transmissions %d\n", metadata->max_transmissions);
             } else {
               metadata->max_transmissions =
                 packetbuf_attr(PACKETBUF_ATTR_MAX_MAC_TRANSMISSIONS);
+              PRINTF ("#####max_transmissions %d\n", metadata->max_transmissions);
             }
             metadata->sent = sent;
             metadata->cptr = ptr;

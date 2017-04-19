@@ -76,7 +76,7 @@
 #include "lib/random.h"
 
 /*------------------------------------------------------------------*/
-#define DEBUG 0
+#define DEBUG DEBUG_NONE
 #include "net/ip/uip-debug.h"
 
 #if UIP_LOGGING
@@ -562,6 +562,7 @@ na_input(void)
       if(nbr->isrouter && !is_router) {
         defrt = uip_ds6_defrt_lookup(&UIP_IP_BUF->srcipaddr);
         if(defrt != NULL) {
+         printf ("na_input 2 uip_ds6_defrt_rm\n");
           uip_ds6_defrt_rm(defrt);
         }
       }
@@ -1051,6 +1052,7 @@ ra_input(void)
     }
   } else {
     if(defrt != NULL) {
+      printf ("ra_input uip_ds6_defrt_rm\n");
       uip_ds6_defrt_rm(defrt);
     }
   }

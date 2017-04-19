@@ -54,7 +54,7 @@
 
 #include <string.h>
 
-#define DEBUG DEBUG_NONE
+#define DEBUG DEBUG_PRINT
 #include "net/ip/uip-debug.h"
 
 #if UIP_LOGGING
@@ -431,7 +431,7 @@ eventhandler(process_event_t ev, process_data_t data)
           tcpip_ipv6_output();
 #else
           if(uip_len > 0) {
-            PRINTF("tcpip_output from periodic len %d\n", uip_len);
+            PRINTF("\ntcpip_output from periodic len %d\n", uip_len);
             tcpip_output();
             PRINTF("tcpip_output after periodic len %d\n", uip_len);
           }
@@ -575,6 +575,10 @@ tcpip_ipv6_output(void)
        nexthop address. */
     if(nexthop == NULL && uip_ds6_is_addr_onlink(&UIP_IP_BUF->destipaddr)){
       nexthop = &UIP_IP_BUF->destipaddr;
+      PRINTF("Dest is nexthop ");
+      PRINT6ADDR(nexthop);
+     PRINTF("\n");    
+    
     }
 
     if(nexthop == NULL) {
@@ -584,8 +588,10 @@ tcpip_ipv6_output(void)
 
       /* No route was found - we send to the default route instead. */
       if(route == NULL) {
-        PRINTF("tcpip_ipv6_output: no route found, using default route\n");
+        PRINTF("tcpip_ipv6_output: no route found, using default route");
         nexthop = uip_ds6_defrt_choose();
+        PRINT6ADDR(nexthop);
+        PRINTF("\n");  
         if(nexthop == NULL) {
 #ifdef UIP_FALLBACK_INTERFACE
           PRINTF("FALLBACK: removing ext hdrs & setting proto %d %d\n",
@@ -617,8 +623,10 @@ tcpip_ipv6_output(void)
       } else {
         /* A route was found, so we look up the nexthop neighbor for
            the route. */
+        PRINTF("\nRoute found,look up the nexthop ");
         nexthop = uip_ds6_route_nexthop(route);
-
+        PRINT6ADDR(nexthop);
+	    PRINTF("\n");
         /* If the nexthop is dead, for example because the neighbor
            never responded to link-layer acks, we drop its route. */
         if(nexthop == NULL) {

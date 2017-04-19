@@ -1,0 +1,107 @@
+rpl.c:#include "net/ipv6/uip-ds6.h"
+rpl.c:#include "net/ipv6/uip-icmp6.h"
+rpl.c:#include "net/ipv6/multicast/uip-mcast6.h"
+rpl.c:#include "net/ip/uip-debug.h"
+rpl.c:  ANNOTATE("#L %u 0\n", nexthop->u8[sizeof(uip_ipaddr_t) - 1]);
+rpl.c:  rep->state.dag = dag;
+rpl.c:  rep->state.lifetime = RPL_LIFETIME(dag->instance, dag->instance->default_lifetime);
+rpl.c:        p->rank = INFINITE_RANK;
+rpl.c:        p->flags |= RPL_PARENT_FLAG_UPDATED;
+rpl-dag.c:#include "net/ipv6/uip-nd6.h"
+rpl-dag.c:#include "net/ipv6/uip-ds6-nbr.h"
+rpl-dag.c:#include "net/ipv6/multicast/uip-mcast6.h"
+rpl-dag.c:#include "net/ip/uip-debug.h"
+rpl-dag.c:          p->rank,
+rpl-dag.c:    return p->rank;
+rpl-dag.c:  if(p != NULL && p->dag != NULL) {
+rpl-dag.c:    rpl_instance_t *instance = p->dag->instance;
+rpl-dag.c:  if(p != NULL && p->dag != NULL) {
+rpl-dag.c:    rpl_instance_t *instance = p->dag->instance;
+rpl-dag.c:  if(p == NULL || p->dag == NULL || p->dag->instance == NULL || p->dag->instance->of == NULL) {
+rpl-dag.c:    return !rpl_parent_is_fresh(p) || p->dag->instance->of->parent_has_usable_link(p);
+rpl-dag.c:    if(dag == p->dag && p->rank >= minimum_rank) {
+rpl-dag.c:    if(dag == p->dag && p->rank >= minimum_rank) {
+rpl-dag.c:    (lollipop_greater_than(dio->dtsn, p->dtsn));
+rpl-dag.c:      p->dag = dag;
+rpl-dag.c:      p->rank = dio->rank;
+rpl-dag.c:      p->dtsn = dio->dtsn;
+rpl-dag.c:      memcpy(&p->mc, &dio->mc, sizeof(p->mc));
+rpl-dag.c:  if(p != NULL && p->dag == dag) {
+rpl-dag.c:    return p->dag;
+rpl-dag.c:  if(p && p->dag && p->dag->instance == instance) {
+rpl-dag.c:    if(rpl_select_parent(p->dag) != NULL) {
+rpl-dag.c:      if(p->dag != best_dag) {
+rpl-dag.c:        best_dag = instance->of->best_dag(best_dag, p->dag);
+rpl-dag.c:    } else if(p->dag == best_dag) {
+rpl-dag.c:    if(p->dag != dag || p->rank == INFINITE_RANK) {
+rpl-dag.c:  p->dtsn = dio->dtsn;
+rpl-dag.c:  p->rank = dio->rank;
+rpl-dag.c:  p->dtsn = dio->dtsn;
+rpl-dag.c:    if(p->dag != NULL && p->dag->instance && (p->flags & RPL_PARENT_FLAG_UPDATED)) {
+rpl-dag.c:      p->flags &= ~RPL_PARENT_FLAG_UPDATED;
+rpl-dag.c:      if(!rpl_process_parent_event(p->dag->instance, p)) {
+rpl-dag.c:    rpl_remove_routes_by_nexthop(rpl_get_parent_ipaddr(p), p->dag);
+rpl-dag.c:  if(!acceptable_rank(p->dag, p->rank)) {
+rpl-dag.c:    PRINTF("RPL: Unacceptable rank %u (Current min %u, MaxRankInc %u)\n", (unsigned)p->rank,
+rpl-dag.c:        p->dag->min_rank, p->dag->instance->max_rankinc);
+rpl-dag.c:      PRINTF("RPL: New candidate parent with rank %u: ", (unsigned)p->rank);
+rpl-dag.c:    if(p->rank == dio->rank) {
+rpl-dag.c:  p->rank = dio->rank;
+rpl-dag.c:  p->flags |= RPL_PARENT_FLAG_UPDATED;
+rpl-dag.c:	 p->rank, rpl_get_parent_link_metric(p));
+rpl-dag.c:  memcpy(&p->mc, &dio->mc, sizeof(p->mc));
+rpl-dag.c:  p->dtsn = dio->dtsn;
+rpl-dag-root.c:#include "net/ip/uip-debug.h"
+rpl-ext-header.c:#include "net/ipv6/uip-ds6.h"
+rpl-ext-header.c:#include "net/ip/uip-debug.h"
+rpl-ext-header.c:    PRINTF("RPL: Hop-by-hop extension header has wrong size or type (%u %u %u)\n",
+rpl-ext-header.c:         * As per RFC 2460, only the Hop-by-Hop Options header and
+rpl-ext-header.c:         * As per RFC 2460, only the Hop-by-Hop Options header and
+rpl-ext-header.c:      PRINTF("RPL: Hop-by-hop extension header has wrong size (%u %u)\n",
+rpl-ext-header.c:      PRINTF("RPL: Unable to add/update hop-by-hop extension header: incorrect instance\n");
+rpl-ext-header.c:  /* Insert hop-by-hop header */
+rpl-ext-header.c:  PRINTF("RPL: Creating hop-by-hop option\n");
+rpl-ext-header.c:    PRINTF("RPL: Packet too long: impossible to add hop-by-hop option\n");
+rpl-ext-header.c:  /* Look for hop-by-hop and routing headers */
+rpl-ext-header.c:        /* Remove hop-by-hop and routing headers */
+rpl-ext-header.c:         * Options header does not appear between the Hop-by-Hop
+rpl-icmp6.c:#include "net/ipv6/uip-ds6.h"
+rpl-icmp6.c:#include "net/ipv6/uip-nd6.h"
+rpl-icmp6.c:#include "net/ipv6/uip-icmp6.h"
+rpl-icmp6.c:#include "net/ipv6/multicast/uip-mcast6.h"
+rpl-icmp6.c:#include "net/ip/uip-debug.h"
+rpl-icmp6.c:  rep->state.dao_seqno_in = sequence;
+rpl-icmp6.c:  rep->state.dao_seqno_out = dao_sequence;
+rpl-icmp6.c:      mcast_group->dag = dag;
+rpl-icmp6.c:      mcast_group->lifetime = RPL_LIFETIME(instance, lifetime);
+rpl-icmp6.c:       rep->length == prefixlen &&
+rpl-icmp6.c:      rep->state.lifetime = RPL_NOPATH_REMOVAL_DELAY;
+rpl-icmp6.c:  rep->state.lifetime = RPL_LIFETIME(instance, lifetime);
+rpl-icmp6.c:          rep->state.dao_seqno_in == sequence) ||
+rpl-icmp6.c:         rep->state.dao_seqno_in == sequence) {
+rpl-icmp6.c:        out_seq = rep->state.dao_seqno_out;
+rpl-mrhof.c:#include "net/ip/uip-debug.h"
+rpl-mrhof.c:  if(p == NULL || p->dag == NULL || p->dag->instance == NULL) {
+rpl-mrhof.c:  switch(p->dag->instance->mc.type) {
+rpl-mrhof.c:      base = p->mc.obj.etx;
+rpl-mrhof.c:      base = p->mc.obj.energy.energy_est << 8;
+rpl-mrhof.c:      base = p->rank;
+rpl-mrhof.c:  base = p->rank;
+rpl-mrhof.c:  if(p == NULL || p->dag == NULL || p->dag->instance == NULL) {
+rpl-mrhof.c:  min_hoprankinc = p->dag->instance->min_hoprankinc;
+rpl-mrhof.c:  return MAX(MIN((uint32_t)p->rank + min_hoprankinc, 0xffff), path_cost);
+rpl-nbr-policy.c:#include "net/ipv6/uip-ds6-nbr.h"
+rpl-nbr-policy.c:#include "net/ipv6/uip-ds6-route.h"
+rpl-nbr-policy.c:#include "net/ip/uip-debug.h"
+rpl-ns.c:#include "net/ipv6/uip-ds6.h"
+rpl-ns.c:#include "net/ipv6/uip-icmp6.h"
+rpl-ns.c:#include "net/ip/uip-debug.h"
+rpl-of0.c:#include "net/ip/uip-debug.h"
+rpl-of0.c:  if(p == NULL || p->dag == NULL || p->dag->instance == NULL) {
+rpl-of0.c:  min_hoprankinc = p->dag->instance->min_hoprankinc;
+rpl-of0.c:  return MIN((uint32_t)p->rank + parent_link_metric(p), 0xffff);
+rpl-of0.c:    return MIN((uint32_t)p->rank + parent_rank_increase(p), INFINITE_RANK);
+rpl-timers.c:#include "net/ipv6/multicast/uip-mcast6.h"
+rpl-timers.c:#include "net/ip/uip-debug.h"
+rpl-timers.c:      if(p->dag == dag && !rpl_parent_is_fresh(p)) {
+rpl-timers.c:      if(p->dag == dag && stats != NULL) {

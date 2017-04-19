@@ -73,7 +73,8 @@
 #if !RPL_MRHOF_SQUARED_ETX
 /* Configuration parameters of RFC6719. Reject parents that have a higher
  * link metric than the following. The default value is 512 but we use 1024. */
-#define MAX_LINK_METRIC     1024 /* Eq ETX of 8 */
+/*Lav #define MAX_LINK_METRIC     1024  Eq ETX of 8 */
+#define MAX_LINK_METRIC     1024  /* Eq ETX of 8 */
 /* Hysteresis of MRHOF: the rank must differ more than PARENT_SWITCH_THRESHOLD_DIV
  * in order to switch preferred parent. Default in RFC6719: 192, eq ETX of 1.5.
  * We use a more aggressive setting: 96, eq ETX of 0.75.
@@ -86,7 +87,8 @@ to the threshold of 96 in the non-squared case) */
 #endif /* !RPL_MRHOF_SQUARED_ETX */
 
 /* Reject parents that have a higher path cost than the following. */
-#define MAX_PATH_COST      32768   /* Eq path ETX of 256 */
+/*Lav #define MAX_PATH_COST      32768    Eq path ETX of 256 */
+#define MAX_PATH_COST      32768    /* Eq path ETX of 256 */
 
 /*---------------------------------------------------------------------------*/
 static void
@@ -182,6 +184,8 @@ parent_is_acceptable(rpl_parent_t *p)
   uint16_t link_metric = parent_link_metric(p);
   uint16_t path_cost = parent_path_cost(p);
   /* Exclude links with too high link metrics or path cost (RFC6719, 3.2.2) */
+  PRINTF(" LINK_metric  %d Path cast %d \n", link_metric ,path_cost); 
+
   return link_metric <= MAX_LINK_METRIC && path_cost <= MAX_PATH_COST;
 }
 /*---------------------------------------------------------------------------*/
@@ -205,7 +209,11 @@ best_parent(rpl_parent_t *p1, rpl_parent_t *p2)
   p1_is_acceptable = p1 != NULL && parent_is_acceptable(p1);
   p2_is_acceptable = p2 != NULL && parent_is_acceptable(p2);
 
+
   if(!p1_is_acceptable) {
+    	
+
+   if(!p2_is_acceptable) PRINTF("\nbest_parent :!p2_is_acceptable ");
     return p2_is_acceptable ? p2 : NULL;
   }
   if(!p2_is_acceptable) {

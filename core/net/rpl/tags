@@ -1,0 +1,552 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BASE_RANK	rpl-private.h	179;"	d
+DAG_RANK	rpl-private.h	175;"	d
+DEBUG	rpl-dag-root.c	41;"	d	file:
+DEBUG	rpl-dag.c	61;"	d	file:
+DEBUG	rpl-ext-header.c	54;"	d	file:
+DEBUG	rpl-icmp6.c	62;"	d	file:
+DEBUG	rpl-mrhof.c	54;"	d	file:
+DEBUG	rpl-nbr-policy.c	52;"	d	file:
+DEBUG	rpl-ns.c	53;"	d	file:
+DEBUG	rpl-of0.c	49;"	d	file:
+DEBUG	rpl-timers.c	52;"	d	file:
+DEBUG	rpl.c	53;"	d	file:
+INFINITE_RANK	rpl-private.h	184;"	d
+MAX_CHILDREN	rpl-nbr-policy.c	65;"	d	file:
+MAX_LINK_METRIC	rpl-mrhof.c	76;"	d	file:
+MAX_LINK_METRIC	rpl-mrhof.c	83;"	d	file:
+MAX_PATH_COST	rpl-mrhof.c	89;"	d	file:
+MAX_STEP_OF_RANK	rpl-of0.c	57;"	d	file:
+MIN_STEP_OF_RANK	rpl-of0.c	56;"	d	file:
+PARENT_SWITCH_THRESHOLD	rpl-mrhof.c	81;"	d	file:
+PARENT_SWITCH_THRESHOLD	rpl-mrhof.c	84;"	d	file:
+RANK_FACTOR	rpl-of0.c	54;"	d	file:
+RANK_STRETCH	rpl-of0.c	53;"	d	file:
+ROOT_RANK	rpl-private.h	182;"	d
+RPL_CODE_DAO	rpl-private.h	74;"	d
+RPL_CODE_DAO_ACK	rpl-private.h	75;"	d
+RPL_CODE_DIO	rpl-private.h	73;"	d
+RPL_CODE_DIS	rpl-private.h	72;"	d
+RPL_CODE_SEC_DAO	rpl-private.h	78;"	d
+RPL_CODE_SEC_DAO_ACK	rpl-private.h	79;"	d
+RPL_CODE_SEC_DIO	rpl-private.h	77;"	d
+RPL_CODE_SEC_DIS	rpl-private.h	76;"	d
+RPL_CONF_H	rpl-conf.h	39;"	d
+RPL_CONF_STATS	rpl-conf.h	45;"	d
+RPL_DAG_GRACE_PERIOD	rpl-dag-root.c	44;"	d	file:
+RPL_DAG_LIFETIME	rpl-conf.h	152;"	d
+RPL_DAG_LIFETIME	rpl-conf.h	154;"	d
+RPL_DAG_MC	rpl-conf.h	89;"	d
+RPL_DAG_MC	rpl-conf.h	91;"	d
+RPL_DAG_MC_AGGR_ADDITIVE	rpl.h	70;"	d
+RPL_DAG_MC_AGGR_MAXIMUM	rpl.h	71;"	d
+RPL_DAG_MC_AGGR_MINIMUM	rpl.h	72;"	d
+RPL_DAG_MC_AGGR_MULTIPLICATIVE	rpl.h	73;"	d
+RPL_DAG_MC_ENERGY	rpl.h	55;"	d
+RPL_DAG_MC_ENERGY_ESTIMATION	rpl.h	78;"	d
+RPL_DAG_MC_ENERGY_INCLUDED	rpl.h	76;"	d
+RPL_DAG_MC_ENERGY_TYPE	rpl.h	77;"	d
+RPL_DAG_MC_ENERGY_TYPE_BATTERY	rpl.h	82;"	d
+RPL_DAG_MC_ENERGY_TYPE_MAINS	rpl.h	81;"	d
+RPL_DAG_MC_ENERGY_TYPE_SCAVENGING	rpl.h	83;"	d
+RPL_DAG_MC_ETX	rpl.h	60;"	d
+RPL_DAG_MC_FLAG_C	rpl.h	65;"	d
+RPL_DAG_MC_FLAG_O	rpl.h	66;"	d
+RPL_DAG_MC_FLAG_P	rpl.h	64;"	d
+RPL_DAG_MC_FLAG_R	rpl.h	67;"	d
+RPL_DAG_MC_HOPCOUNT	rpl.h	56;"	d
+RPL_DAG_MC_LATENCY	rpl.h	58;"	d
+RPL_DAG_MC_LC	rpl.h	61;"	d
+RPL_DAG_MC_LQL	rpl.h	59;"	d
+RPL_DAG_MC_NONE	rpl.h	53;"	d
+RPL_DAG_MC_NSA	rpl.h	54;"	d
+RPL_DAG_MC_THROUGHPUT	rpl.h	57;"	d
+RPL_DAG_ROOT_H_	rpl-dag-root.h	33;"	d
+RPL_DAO_ACK_ACCEPT	rpl-private.h	97;"	d
+RPL_DAO_ACK_TIMEOUT	rpl-private.h	101;"	d
+RPL_DAO_ACK_UNABLE_TO_ACCEPT	rpl-private.h	98;"	d
+RPL_DAO_ACK_UNABLE_TO_ADD_ROUTE_AT_ROOT	rpl-private.h	99;"	d
+RPL_DAO_ACK_UNCONDITIONAL_ACCEPT	rpl-private.h	96;"	d
+RPL_DAO_DELAY	rpl-private.h	121;"	d
+RPL_DAO_DELAY	rpl-private.h	123;"	d
+RPL_DAO_D_FLAG	rpl-private.h	94;"	d
+RPL_DAO_K_FLAG	rpl-private.h	93;"	d
+RPL_DAO_MAX_RETRANSMISSIONS	rpl-private.h	134;"	d
+RPL_DAO_MAX_RETRANSMISSIONS	rpl-private.h	136;"	d
+RPL_DAO_RETRANSMISSION_TIMEOUT	rpl-private.h	140;"	d
+RPL_DAO_RETRANSMISSION_TIMEOUT	rpl-private.h	142;"	d
+RPL_DAO_SPECIFY_DAG	rpl-conf.h	162;"	d
+RPL_DAO_SPECIFY_DAG	rpl-conf.h	164;"	d
+RPL_DAO_SPECIFY_DAG	rpl-conf.h	167;"	d
+RPL_DEFAULT_INSTANCE	rpl-conf.h	96;"	d
+RPL_DEFAULT_INSTANCE	rpl-conf.h	98;"	d
+RPL_DEFAULT_LIFETIME	rpl-conf.h	224;"	d
+RPL_DEFAULT_LIFETIME	rpl-conf.h	226;"	d
+RPL_DEFAULT_LIFETIME_UNIT	rpl-conf.h	215;"	d
+RPL_DEFAULT_LIFETIME_UNIT	rpl-conf.h	217;"	d
+RPL_DEFAULT_ROUTE_INFINITE_LIFETIME	rpl-conf.h	140;"	d
+RPL_DEFAULT_ROUTE_INFINITE_LIFETIME	rpl-conf.h	142;"	d
+RPL_DIO_GROUNDED	rpl-icmp6.c	67;"	d	file:
+RPL_DIO_INTERVAL_DOUBLINGS	rpl-conf.h	192;"	d
+RPL_DIO_INTERVAL_DOUBLINGS	rpl-conf.h	194;"	d
+RPL_DIO_INTERVAL_MIN	rpl-conf.h	179;"	d
+RPL_DIO_INTERVAL_MIN	rpl-conf.h	181;"	d
+RPL_DIO_MOP_MASK	rpl-icmp6.c	69;"	d	file:
+RPL_DIO_MOP_SHIFT	rpl-icmp6.c	68;"	d	file:
+RPL_DIO_PREFERENCE_MASK	rpl-icmp6.c	70;"	d	file:
+RPL_DIO_REDUNDANCY	rpl-conf.h	205;"	d
+RPL_DIO_REDUNDANCY	rpl-conf.h	207;"	d
+RPL_DIO_REFRESH_DAO_ROUTES	rpl-conf.h	267;"	d
+RPL_DIO_REFRESH_DAO_ROUTES	rpl-conf.h	269;"	d
+RPL_DIS_INTERVAL	rpl-conf.h	327;"	d
+RPL_DIS_INTERVAL	rpl-conf.h	329;"	d
+RPL_DIS_SEND	rpl-private.h	263;"	d
+RPL_DIS_START_DELAY	rpl-conf.h	336;"	d
+RPL_DIS_START_DELAY	rpl-conf.h	338;"	d
+RPL_GROUNDED	rpl-dag.c	77;"	d	file:
+RPL_GROUNDED	rpl-dag.c	79;"	d	file:
+RPL_H	rpl.h	39;"	d
+RPL_HDR_OPT_DOWN	rpl-private.h	110;"	d
+RPL_HDR_OPT_DOWN_SHIFT	rpl-private.h	111;"	d
+RPL_HDR_OPT_FWD_ERR	rpl-private.h	114;"	d
+RPL_HDR_OPT_FWD_ERR_SHIFT	rpl-private.h	115;"	d
+RPL_HDR_OPT_LEN	rpl-private.h	105;"	d
+RPL_HDR_OPT_RANK_ERR	rpl-private.h	112;"	d
+RPL_HDR_OPT_RANK_ERR_SHIFT	rpl-private.h	113;"	d
+RPL_HOP_BY_HOP_LEN	rpl-private.h	106;"	d
+RPL_INSTANCE_D_FLAG	rpl-private.h	188;"	d
+RPL_INSTANCE_LOCAL_FLAG	rpl-private.h	187;"	d
+RPL_IS_NON_STORING	rpl-private.h	248;"	d
+RPL_IS_STORING	rpl-private.h	247;"	d
+RPL_LEAF_ONLY	rpl-conf.h	106;"	d
+RPL_LEAF_ONLY	rpl-conf.h	108;"	d
+RPL_LIFETIME	rpl-private.h	148;"	d
+RPL_LOLLIPOP_CIRCULAR_REGION	rpl-private.h	269;"	d
+RPL_LOLLIPOP_INCREMENT	rpl-private.h	272;"	d
+RPL_LOLLIPOP_INIT	rpl-private.h	271;"	d
+RPL_LOLLIPOP_IS_INIT	rpl-private.h	281;"	d
+RPL_LOLLIPOP_MAX_VALUE	rpl-private.h	268;"	d
+RPL_LOLLIPOP_SEQUENCE_WINDOWS	rpl-private.h	270;"	d
+RPL_MAX_DAG_PER_INSTANCE	rpl-conf.h	124;"	d
+RPL_MAX_DAG_PER_INSTANCE	rpl-conf.h	126;"	d
+RPL_MAX_INSTANCES	rpl-conf.h	115;"	d
+RPL_MAX_INSTANCES	rpl-conf.h	117;"	d
+RPL_MAX_RANKINC	rpl-private.h	170;"	d
+RPL_MAX_RANKINC	rpl-private.h	172;"	d
+RPL_MCAST_LIFETIME	rpl-private.h	257;"	d
+RPL_MCAST_LIFETIME	rpl-private.h	259;"	d
+RPL_MIN_HOPRANKINC	rpl-private.h	161;"	d
+RPL_MIN_HOPRANKINC	rpl-private.h	163;"	d
+RPL_MIN_HOPRANKINC	rpl-private.h	166;"	d
+RPL_MODE_FEATHER	rpl.h	/^  RPL_MODE_FEATHER = 1,$/;"	e	enum:rpl_mode
+RPL_MODE_LEAF	rpl.h	/^  RPL_MODE_LEAF = 2,$/;"	e	enum:rpl_mode
+RPL_MODE_MESH	rpl.h	/^  RPL_MODE_MESH = 0,$/;"	e	enum:rpl_mode
+RPL_MOP_DEFAULT	rpl-private.h	204;"	d
+RPL_MOP_DEFAULT	rpl-private.h	207;"	d
+RPL_MOP_DEFAULT	rpl-private.h	209;"	d
+RPL_MOP_NON_STORING	rpl-private.h	198;"	d
+RPL_MOP_NO_DOWNWARD_ROUTES	rpl-private.h	197;"	d
+RPL_MOP_STORING_MULTICAST	rpl-private.h	200;"	d
+RPL_MOP_STORING_NO_MULTICAST	rpl-private.h	199;"	d
+RPL_MRHOF_SQUARED_ETX	rpl-mrhof.c	68;"	d	file:
+RPL_MRHOF_SQUARED_ETX	rpl-mrhof.c	70;"	d	file:
+RPL_NOPATH_REMOVAL_DELAY	rpl-private.h	128;"	d
+RPL_NOPATH_REMOVAL_DELAY	rpl-private.h	130;"	d
+RPL_NS_H	rpl-ns.h	42;"	d
+RPL_NS_LINK_NUM	rpl-ns.h	47;"	d
+RPL_NS_LINK_NUM	rpl-ns.h	49;"	d
+RPL_OCP_MRHOF	rpl.h	87;"	d
+RPL_OCP_OF0	rpl.h	86;"	d
+RPL_OF0_ETX_BASED_SR	rpl-of0.c	67;"	d	file:
+RPL_OF0_FIXED_SR	rpl-of0.c	66;"	d	file:
+RPL_OF0_SR	rpl-of0.c	70;"	d	file:
+RPL_OF0_SR	rpl-of0.c	72;"	d	file:
+RPL_OF_OCP	rpl-conf.h	57;"	d
+RPL_OF_OCP	rpl-conf.h	59;"	d
+RPL_OPTION_DAG_CONF	rpl-private.h	86;"	d
+RPL_OPTION_DAG_METRIC_CONTAINER	rpl-private.h	84;"	d
+RPL_OPTION_PAD1	rpl-private.h	82;"	d
+RPL_OPTION_PADN	rpl-private.h	83;"	d
+RPL_OPTION_PREFIX_INFO	rpl-private.h	90;"	d
+RPL_OPTION_ROUTE_INFO	rpl-private.h	85;"	d
+RPL_OPTION_SOLICITED_INFO	rpl-private.h	89;"	d
+RPL_OPTION_TARGET	rpl-private.h	87;"	d
+RPL_OPTION_TARGET_DESC	rpl-private.h	91;"	d
+RPL_OPTION_TRANSIT	rpl-private.h	88;"	d
+RPL_PARENT_FLAG_LINK_METRIC_VALID	rpl.h	112;"	d
+RPL_PARENT_FLAG_UPDATED	rpl.h	111;"	d
+RPL_PREFERENCE	rpl-conf.h	233;"	d
+RPL_PREFERENCE	rpl-conf.h	235;"	d
+RPL_PRIVATE_H	rpl-private.h	38;"	d
+RPL_PROBING_DELAY_FUNC	rpl-conf.h	318;"	d
+RPL_PROBING_DELAY_FUNC	rpl-conf.h	320;"	d
+RPL_PROBING_INTERVAL	rpl-conf.h	286;"	d
+RPL_PROBING_INTERVAL	rpl-conf.h	288;"	d
+RPL_PROBING_SELECT_FUNC	rpl-conf.h	295;"	d
+RPL_PROBING_SELECT_FUNC	rpl-conf.h	297;"	d
+RPL_PROBING_SEND_FUNC	rpl-conf.h	309;"	d
+RPL_PROBING_SEND_FUNC	rpl-conf.h	311;"	d
+RPL_REPAIR_ON_DAO_NACK	rpl-conf.h	254;"	d
+RPL_REPAIR_ON_DAO_NACK	rpl-conf.h	256;"	d
+RPL_RH_LEN	rpl-private.h	107;"	d
+RPL_RH_TYPE_SRH	rpl-private.h	109;"	d
+RPL_ROUTE_FROM_DIO	rpl-private.h	194;"	d
+RPL_ROUTE_FROM_INTERNAL	rpl-private.h	191;"	d
+RPL_ROUTE_FROM_MULTICAST_DAO	rpl-private.h	193;"	d
+RPL_ROUTE_FROM_UNICAST_DAO	rpl-private.h	192;"	d
+RPL_SRH_LEN	rpl-private.h	108;"	d
+RPL_STAT	rpl-private.h	332;"	d
+RPL_STAT	rpl-private.h	334;"	d
+RPL_SUPPORTED_OFS	rpl-conf.h	68;"	d
+RPL_SUPPORTED_OFS	rpl-conf.h	70;"	d
+RPL_WITH_DAO_ACK	rpl-conf.h	243;"	d
+RPL_WITH_DAO_ACK	rpl-conf.h	245;"	d
+RPL_WITH_MC	rpl-conf.h	82;"	d
+RPL_WITH_MC	rpl-conf.h	84;"	d
+RPL_WITH_NON_STORING	rpl-private.h	227;"	d
+RPL_WITH_NON_STORING	rpl-private.h	230;"	d
+RPL_WITH_PROBING	rpl-conf.h	277;"	d
+RPL_WITH_PROBING	rpl-conf.h	279;"	d
+RPL_WITH_STORING	rpl-private.h	217;"	d
+RPL_WITH_STORING	rpl-private.h	220;"	d
+RPL_ZERO_LIFETIME	rpl-private.h	146;"	d
+STEP_OF_RANK	rpl-of0.c	76;"	d	file:
+STEP_OF_RANK	rpl-of0.c	82;"	d	file:
+UIP_EXT_BUF	rpl-ext-header.c	62;"	d	file:
+UIP_EXT_HDR_OPT_BUF	rpl-ext-header.c	67;"	d	file:
+UIP_EXT_HDR_OPT_PADN_BUF	rpl-ext-header.c	68;"	d	file:
+UIP_EXT_HDR_OPT_RPL_BUF	rpl-ext-header.c	69;"	d	file:
+UIP_HBHO_BUF	rpl-ext-header.c	63;"	d	file:
+UIP_HBHO_NEXT_BUF	rpl-ext-header.c	64;"	d	file:
+UIP_ICMP_BUF	rpl-icmp6.c	73;"	d	file:
+UIP_ICMP_PAYLOAD	rpl-icmp6.c	74;"	d	file:
+UIP_IP_BUF	rpl-ext-header.c	61;"	d	file:
+UIP_IP_BUF	rpl-icmp6.c	72;"	d	file:
+UIP_IP_BUF	rpl-nbr-policy.c	66;"	d	file:
+UIP_RH_BUF	rpl-ext-header.c	65;"	d	file:
+UIP_RPL_SRH_BUF	rpl-ext-header.c	66;"	d	file:
+acceptable_rank	rpl-dag.c	/^acceptable_rank(rpl_dag_t *dag, rpl_rank_t rank)$/;"	f	file:
+add_nbr_from_dio	rpl-dag.c	/^add_nbr_from_dio(uip_ipaddr_t *from, rpl_dio_t *dio)$/;"	f	file:
+aggr	rpl.h	/^  uint8_t aggr;$/;"	m	struct:rpl_metric_container
+best_dag	rpl-mrhof.c	/^best_dag(rpl_dag_t *d1, rpl_dag_t *d2)$/;"	f	file:
+best_dag	rpl-of0.c	/^best_dag(rpl_dag_t *d1, rpl_dag_t *d2)$/;"	f	file:
+best_dag	rpl.h	/^  rpl_dag_t *(*best_dag)(rpl_dag_t *, rpl_dag_t *);$/;"	m	struct:rpl_of
+best_parent	rpl-dag.c	/^best_parent(rpl_dag_t *dag, int fresh_only)$/;"	f	file:
+best_parent	rpl-mrhof.c	/^best_parent(rpl_parent_t *p1, rpl_parent_t *p2)$/;"	f	file:
+best_parent	rpl-of0.c	/^best_parent(rpl_parent_t *p1, rpl_parent_t *p2)$/;"	f	file:
+best_parent	rpl.h	/^  rpl_parent_t *(*best_parent)(rpl_parent_t *, rpl_parent_t *);$/;"	m	struct:rpl_of
+c	rpl-dag-root.c	/^static struct ctimer c;$/;"	v	typeref:struct:ctimer	file:
+check_prefix	rpl-dag.c	/^check_prefix(rpl_prefix_t *last_prefix, rpl_prefix_t *new_prefix)$/;"	f	file:
+count_matching_bytes	rpl-ext-header.c	/^count_matching_bytes(const void *p1, const void *p2, size_t n)$/;"	f	file:
+create_dag_callback	rpl-dag-root.c	/^create_dag_callback(void *ptr)$/;"	f	file:
+current_dag	rpl.h	/^  rpl_dag_t *current_dag;$/;"	m	struct:rpl_instance
+dag	rpl-ns.h	/^  rpl_dag_t *dag;$/;"	m	struct:rpl_ns_node
+dag	rpl.h	/^  struct rpl_dag *dag;$/;"	m	struct:rpl_parent	typeref:struct:rpl_parent::rpl_dag
+dag_id	rpl-private.h	/^  uip_ipaddr_t dag_id;$/;"	m	struct:rpl_dio
+dag_id	rpl.h	/^  uip_ipaddr_t dag_id;$/;"	m	struct:rpl_dag
+dag_intdoubl	rpl-private.h	/^  uint8_t dag_intdoubl;$/;"	m	struct:rpl_dio
+dag_intmin	rpl-private.h	/^  uint8_t dag_intmin;$/;"	m	struct:rpl_dio
+dag_max_rankinc	rpl-private.h	/^  rpl_rank_t dag_max_rankinc;$/;"	m	struct:rpl_dio
+dag_min_hoprankinc	rpl-private.h	/^  rpl_rank_t dag_min_hoprankinc;$/;"	m	struct:rpl_dio
+dag_redund	rpl-private.h	/^  uint8_t dag_redund;$/;"	m	struct:rpl_dio
+dag_root	rpl-dag-root.c	/^dag_root(void)$/;"	f	file:
+dag_table	rpl.h	/^  rpl_dag_t dag_table[RPL_MAX_DAG_PER_INSTANCE];$/;"	m	struct:rpl_instance
+dao_ack_callback	rpl-mrhof.c	/^dao_ack_callback(rpl_parent_t *p, int status)$/;"	f	file:
+dao_ack_callback	rpl-of0.c	/^dao_ack_callback(rpl_parent_t *p, int status)$/;"	f	file:
+dao_ack_callback	rpl.h	/^  void (*dao_ack_callback)(rpl_parent_t *, int status);$/;"	m	struct:rpl_of
+dao_ack_input	rpl-icmp6.c	/^dao_ack_input(void)$/;"	f	file:
+dao_ack_output	rpl-icmp6.c	/^dao_ack_output(rpl_instance_t *instance, uip_ipaddr_t *dest, uint8_t sequence,$/;"	f
+dao_input	rpl-icmp6.c	/^dao_input(void)$/;"	f	file:
+dao_input_nonstoring	rpl-icmp6.c	/^dao_input_nonstoring(void)$/;"	f	file:
+dao_input_storing	rpl-icmp6.c	/^dao_input_storing(void)$/;"	f	file:
+dao_lifetime_timer	rpl.h	/^  struct ctimer dao_lifetime_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+dao_output	rpl-icmp6.c	/^dao_output(rpl_parent_t *parent, uint8_t lifetime)$/;"	f
+dao_output_target	rpl-icmp6.c	/^dao_output_target(rpl_parent_t *parent, uip_ipaddr_t *prefix, uint8_t lifetime)$/;"	f
+dao_output_target_seq	rpl-icmp6.c	/^dao_output_target_seq(rpl_parent_t *parent, uip_ipaddr_t *prefix,$/;"	f	file:
+dao_retransmit_timer	rpl.h	/^  struct ctimer dao_retransmit_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+dao_sequence	rpl-icmp6.c	/^static uint8_t dao_sequence = RPL_LOLLIPOP_INIT;$/;"	v	file:
+dao_timer	rpl.h	/^  struct ctimer dao_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+def_route	rpl.h	/^  uip_ds6_defrt_t *def_route;$/;"	m	struct:rpl_instance
+default_instance	rpl-dag.c	/^rpl_instance_t *default_instance;$/;"	v
+default_lifetime	rpl-private.h	/^  uint8_t default_lifetime;$/;"	m	struct:rpl_dio
+default_lifetime	rpl.h	/^  uint8_t default_lifetime;$/;"	m	struct:rpl_instance
+destination_prefix	rpl-private.h	/^  rpl_prefix_t destination_prefix;$/;"	m	struct:rpl_dio
+dio_counter	rpl.h	/^  uint8_t dio_counter;$/;"	m	struct:rpl_instance
+dio_input	rpl-icmp6.c	/^dio_input(void)$/;"	f	file:
+dio_intcurrent	rpl.h	/^  uint8_t dio_intcurrent;$/;"	m	struct:rpl_instance
+dio_intdoubl	rpl.h	/^  uint8_t dio_intdoubl;$/;"	m	struct:rpl_instance
+dio_intmin	rpl.h	/^  uint8_t dio_intmin;$/;"	m	struct:rpl_instance
+dio_next_delay	rpl.h	/^  clock_time_t dio_next_delay; \/* delay for completion of dio interval *\/$/;"	m	struct:rpl_instance
+dio_output	rpl-icmp6.c	/^dio_output(rpl_instance_t *instance, uip_ipaddr_t *uc_addr)$/;"	f
+dio_redundancy	rpl.h	/^  uint8_t dio_redundancy;$/;"	m	struct:rpl_instance
+dio_send	rpl.h	/^  uint8_t dio_send; \/* for keeping track of which mode the timer is in *\/$/;"	m	struct:rpl_instance
+dio_send_ok	rpl-timers.c	/^static uint8_t dio_send_ok;$/;"	v	file:
+dio_timer	rpl.h	/^  struct ctimer dio_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+dio_totint	rpl.h	/^  uint16_t dio_totint;$/;"	m	struct:rpl_instance
+dio_totrecv	rpl.h	/^  uint16_t dio_totrecv;$/;"	m	struct:rpl_instance
+dio_totsend	rpl.h	/^  uint16_t dio_totsend;$/;"	m	struct:rpl_instance
+dis_input	rpl-icmp6.c	/^dis_input(void)$/;"	f	file:
+dis_output	rpl-icmp6.c	/^dis_output(uip_ipaddr_t *addr)$/;"	f
+dtsn	rpl-private.h	/^  uint8_t dtsn;$/;"	m	struct:rpl_dio
+dtsn	rpl.h	/^  uint8_t dtsn;$/;"	m	struct:rpl_parent
+dtsn_out	rpl.h	/^  uint8_t dtsn_out;$/;"	m	struct:rpl_instance
+energy	rpl.h	/^    struct rpl_metric_object_energy energy;$/;"	m	union:rpl_metric_container::metric_object	typeref:struct:rpl_metric_container::metric_object::rpl_metric_object_energy
+energy_est	rpl.h	/^  uint8_t energy_est;$/;"	m	struct:rpl_metric_object_energy
+etx	rpl.h	/^    uint16_t etx;$/;"	m	union:rpl_metric_container::metric_object
+find_parent_any_dag_any_instance	rpl-dag.c	/^find_parent_any_dag_any_instance(uip_ipaddr_t *addr)$/;"	f	file:
+find_parent_dag	rpl-dag.c	/^find_parent_dag(rpl_instance_t *instance, uip_ipaddr_t *addr)$/;"	f	file:
+find_removable_dao	rpl-nbr-policy.c	/^find_removable_dao(uip_ipaddr_t *from, rpl_instance_t *instance)$/;"	f
+find_removable_dio	rpl-nbr-policy.c	/^find_removable_dio(uip_ipaddr_t *from, rpl_dio_t *dio)$/;"	f
+find_removable_dis	rpl-nbr-policy.c	/^find_removable_dis(uip_ipaddr_t *from)$/;"	f
+find_route_entry_by_dao_ack	rpl-icmp6.c	/^find_route_entry_by_dao_ack(uint8_t seq)$/;"	f	file:
+flags	rpl.h	/^  uint8_t flags;$/;"	m	struct:rpl_metric_container
+flags	rpl.h	/^  uint8_t flags;$/;"	m	struct:rpl_metric_object_energy
+flags	rpl.h	/^  uint8_t flags;$/;"	m	struct:rpl_parent
+flags	rpl.h	/^  uint8_t flags;$/;"	m	struct:rpl_prefix
+forward_errors	rpl-private.h	/^  uint16_t forward_errors;$/;"	m	struct:rpl_stats
+get16	rpl-icmp6.c	/^get16(uint8_t *buffer, int pos)$/;"	f	file:
+get32	rpl-icmp6.c	/^get32(uint8_t *buffer, int pos)$/;"	f	file:
+get_dag	rpl-dag.c	/^get_dag(uint8_t instance_id, uip_ipaddr_t *dag_id)$/;"	f	file:
+get_global_addr	rpl-icmp6.c	/^get_global_addr(uip_ipaddr_t *addr)$/;"	f	file:
+get_global_address	rpl-dag-root.c	/^get_global_address(void)$/;"	f	file:
+get_probing_delay	rpl-timers.c	/^get_probing_delay(rpl_dag_t *dag)$/;"	f
+get_probing_target	rpl-timers.c	/^get_probing_target(rpl_dag_t *dag)$/;"	f
+global_repair	rpl-dag.c	/^global_repair(uip_ipaddr_t *from, rpl_dag_t *dag, rpl_dio_t *dio)$/;"	f	file:
+global_repairs	rpl-private.h	/^  uint16_t global_repairs;$/;"	m	struct:rpl_stats
+grounded	rpl-private.h	/^  uint8_t grounded;$/;"	m	struct:rpl_dio
+grounded	rpl.h	/^  uint8_t grounded;$/;"	m	struct:rpl_dag
+handle_dao_retransmission	rpl-icmp6.c	/^handle_dao_retransmission(void *ptr)$/;"	f	file:
+handle_dao_timer	rpl-timers.c	/^handle_dao_timer(void *ptr)$/;"	f	file:
+handle_dio_timer	rpl-timers.c	/^handle_dio_timer(void *ptr)$/;"	f	file:
+handle_periodic_timer	rpl-nbr-policy.c	/^handle_periodic_timer(void *ptr)$/;"	f	file:
+handle_periodic_timer	rpl-timers.c	/^handle_periodic_timer(void *ptr)$/;"	f	file:
+handle_probing_timer	rpl-timers.c	/^handle_probing_timer(void *ptr)$/;"	f	file:
+handle_unicast_dio_timer	rpl-timers.c	/^handle_unicast_dio_timer(void *ptr)$/;"	f	file:
+has_downward_route	rpl.h	/^  uint8_t has_downward_route;$/;"	m	struct:rpl_instance
+insert_hbh_header	rpl-ext-header.c	/^insert_hbh_header(const rpl_instance_t *instance)$/;"	f	file:
+insert_srh_header	rpl-ext-header.c	/^insert_srh_header(void)$/;"	f	file:
+instance	rpl.h	/^  struct rpl_instance *instance;$/;"	m	struct:rpl_dag	typeref:struct:rpl_dag::rpl_instance
+instance_id	rpl-private.h	/^  uint8_t instance_id;$/;"	m	struct:rpl_dio
+instance_id	rpl.h	/^  uint8_t instance_id;$/;"	m	struct:rpl_instance
+instance_table	rpl-dag.c	/^rpl_instance_t instance_table[RPL_MAX_INSTANCES];$/;"	v
+joined	rpl.h	/^  uint8_t joined;$/;"	m	struct:rpl_dag
+length	rpl.h	/^  uint8_t length;$/;"	m	struct:rpl_metric_container
+length	rpl.h	/^  uint8_t length;$/;"	m	struct:rpl_prefix
+lifetime	rpl-ns.h	/^  uint32_t lifetime;$/;"	m	struct:rpl_ns_node
+lifetime	rpl.h	/^  uint32_t lifetime;$/;"	m	struct:rpl_dag
+lifetime	rpl.h	/^  uint32_t lifetime;$/;"	m	struct:rpl_prefix
+lifetime_unit	rpl-private.h	/^  uint16_t lifetime_unit;$/;"	m	struct:rpl_dio
+lifetime_unit	rpl.h	/^  uint16_t lifetime_unit; \/* lifetime in seconds = l_u * d_l *\/$/;"	m	struct:rpl_instance
+link_identifier	rpl-ns.h	/^  unsigned char link_identifier[8];$/;"	m	struct:rpl_ns_node
+local_repairs	rpl-private.h	/^  uint16_t local_repairs;$/;"	m	struct:rpl_stats
+lollipop_greater_than	rpl-dag.c	/^lollipop_greater_than(int a, int b)$/;"	f	file:
+loop_errors	rpl-private.h	/^  uint16_t loop_errors;$/;"	m	struct:rpl_stats
+loop_warnings	rpl-private.h	/^  uint16_t loop_warnings;$/;"	m	struct:rpl_stats
+malformed_msgs	rpl-private.h	/^  uint16_t malformed_msgs;$/;"	m	struct:rpl_stats
+max_rankinc	rpl.h	/^  rpl_rank_t max_rankinc;$/;"	m	struct:rpl_instance
+mc	rpl-private.h	/^  struct rpl_metric_container mc;$/;"	m	struct:rpl_dio	typeref:struct:rpl_dio::rpl_metric_container
+mc	rpl.h	/^  rpl_metric_container_t mc;$/;"	m	struct:rpl_instance
+mc	rpl.h	/^  rpl_metric_container_t mc;$/;"	m	struct:rpl_parent
+mcast_group	rpl-icmp6.c	/^static uip_mcast6_route_t *mcast_group;$/;"	v	file:
+mem_overflows	rpl-private.h	/^  uint16_t mem_overflows;$/;"	m	struct:rpl_stats
+metric_object	rpl.h	/^  union metric_object {$/;"	u	struct:rpl_metric_container
+min_hoprankinc	rpl.h	/^  rpl_rank_t min_hoprankinc;$/;"	m	struct:rpl_instance
+min_rank	rpl.h	/^  rpl_rank_t min_rank; \/* should be reset per DAG iteration! *\/$/;"	m	struct:rpl_dag
+mode	rpl.c	/^static enum rpl_mode mode = RPL_MODE_MESH;$/;"	v	typeref:enum:rpl_mode	file:
+mop	rpl-private.h	/^  uint8_t mop;$/;"	m	struct:rpl_dio
+mop	rpl.h	/^  uint8_t mop;$/;"	m	struct:rpl_instance
+my_dao_seqno	rpl.h	/^  uint8_t my_dao_seqno;$/;"	m	struct:rpl_instance
+my_dao_transmissions	rpl.h	/^  uint8_t my_dao_transmissions;$/;"	m	struct:rpl_instance
+n	rpl-dag-root.c	/^static struct uip_ds6_notification n;$/;"	v	typeref:struct:uip_ds6_notification	file:
+nbr_callback	rpl-dag.c	/^nbr_callback(void *ptr)$/;"	f	file:
+new_dio_interval	rpl-timers.c	/^new_dio_interval(rpl_instance_t *instance)$/;"	f	file:
+next	rpl-ns.h	/^  struct rpl_ns_node *next;$/;"	m	struct:rpl_ns_node	typeref:struct:rpl_ns_node::rpl_ns_node
+next_dis	rpl-timers.c	/^static uint16_t next_dis;$/;"	v	file:
+node_matches_address	rpl-ns.c	/^node_matches_address(const rpl_dag_t *dag, const rpl_ns_node_t *node, const uip_ipaddr_t *addr)$/;"	f	file:
+nodelist	rpl-ns.c	/^LIST(nodelist);$/;"	v
+nullify_parents	rpl-dag.c	/^nullify_parents(rpl_dag_t *dag, rpl_rank_t minimum_rank)$/;"	f	file:
+num_children	rpl-nbr-policy.c	/^static int num_children;  \/* all children that we have as nexthop *\/$/;"	v	file:
+num_free	rpl-nbr-policy.c	/^static int num_free;$/;"	v	file:
+num_nodes	rpl-ns.c	/^static int num_nodes;$/;"	v	file:
+num_parents	rpl-nbr-policy.c	/^static int num_parents; \/* any node that are possible parents *\/$/;"	v	file:
+obj	rpl.h	/^  } obj;$/;"	m	struct:rpl_metric_container	typeref:union:rpl_metric_container::metric_object
+objective_functions	rpl-dag.c	/^static rpl_of_t * const objective_functions[] = RPL_SUPPORTED_OFS;$/;"	v	file:
+ocp	rpl-private.h	/^  rpl_ocp_t ocp;$/;"	m	struct:rpl_dio
+ocp	rpl.h	/^  rpl_ocp_t ocp;$/;"	m	struct:rpl_of
+of	rpl.h	/^  rpl_of_t *of;$/;"	m	struct:rpl_instance
+parent	rpl-ns.h	/^  struct rpl_ns_node *parent;$/;"	m	struct:rpl_ns_node	typeref:struct:rpl_ns_node::rpl_ns_node
+parent_has_usable_link	rpl-mrhof.c	/^parent_has_usable_link(rpl_parent_t *p)$/;"	f	file:
+parent_has_usable_link	rpl-of0.c	/^parent_has_usable_link(rpl_parent_t *p)$/;"	f	file:
+parent_has_usable_link	rpl.h	/^  int (*parent_has_usable_link)(rpl_parent_t *);$/;"	m	struct:rpl_of
+parent_is_acceptable	rpl-mrhof.c	/^parent_is_acceptable(rpl_parent_t *p)$/;"	f	file:
+parent_is_acceptable	rpl-of0.c	/^parent_is_acceptable(rpl_parent_t *p)$/;"	f	file:
+parent_link_metric	rpl-mrhof.c	/^parent_link_metric(rpl_parent_t *p)$/;"	f	file:
+parent_link_metric	rpl-of0.c	/^parent_link_metric(rpl_parent_t *p)$/;"	f	file:
+parent_link_metric	rpl.h	/^  uint16_t (*parent_link_metric)(rpl_parent_t *);$/;"	m	struct:rpl_of
+parent_path_cost	rpl-mrhof.c	/^parent_path_cost(rpl_parent_t *p)$/;"	f	file:
+parent_path_cost	rpl-of0.c	/^parent_path_cost(rpl_parent_t *p)$/;"	f	file:
+parent_path_cost	rpl.h	/^  uint16_t (*parent_path_cost)(rpl_parent_t *);$/;"	m	struct:rpl_of
+parent_rank_increase	rpl-of0.c	/^parent_rank_increase(rpl_parent_t *p)$/;"	f	file:
+parent_switch	rpl-private.h	/^  uint16_t parent_switch;$/;"	m	struct:rpl_stats
+periodic_timer	rpl-nbr-policy.c	/^static struct ctimer periodic_timer;$/;"	v	typeref:struct:ctimer	file:
+periodic_timer	rpl-timers.c	/^static struct ctimer periodic_timer;$/;"	v	typeref:struct:ctimer	file:
+prec	rpl.h	/^  uint8_t prec;$/;"	m	struct:rpl_metric_container
+preference	rpl-private.h	/^  uint8_t preference;$/;"	m	struct:rpl_dio
+preference	rpl.h	/^  uint8_t preference;$/;"	m	struct:rpl_dag
+preferred_parent	rpl.h	/^  rpl_parent_t *preferred_parent;$/;"	m	struct:rpl_dag
+prefix	rpl.h	/^  uip_ipaddr_t prefix;$/;"	m	struct:rpl_prefix
+prefix_info	rpl-private.h	/^  rpl_prefix_t prefix_info;$/;"	m	struct:rpl_dio
+prefix_info	rpl.h	/^  rpl_prefix_t prefix_info;$/;"	m	struct:rpl_dag
+prepare_for_dao_fwd	rpl-icmp6.c	/^prepare_for_dao_fwd(uint8_t sequence, uip_ds6_route_t *rep)$/;"	f	file:
+probing_timer	rpl.h	/^  struct ctimer probing_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+rank	rpl-private.h	/^  rpl_rank_t rank;$/;"	m	struct:rpl_dio
+rank	rpl.h	/^  rpl_rank_t rank;$/;"	m	struct:rpl_dag
+rank	rpl.h	/^  rpl_rank_t rank;$/;"	m	struct:rpl_parent
+rank_via_parent	rpl-mrhof.c	/^rank_via_parent(rpl_parent_t *p)$/;"	f	file:
+rank_via_parent	rpl-of0.c	/^rank_via_parent(rpl_parent_t *p)$/;"	f	file:
+rank_via_parent	rpl.h	/^  rpl_rank_t (*rank_via_parent)(rpl_parent_t *);$/;"	m	struct:rpl_of
+remove_parents	rpl-dag.c	/^remove_parents(rpl_dag_t *dag, rpl_rank_t minimum_rank)$/;"	f	file:
+reset	rpl-mrhof.c	/^reset(rpl_dag_t *dag)$/;"	f	file:
+reset	rpl-of0.c	/^reset(rpl_dag_t *dag)$/;"	f	file:
+reset	rpl.h	/^  void (*reset)(struct rpl_dag *);$/;"	m	struct:rpl_of
+resets	rpl-private.h	/^  uint16_t resets;$/;"	m	struct:rpl_stats
+root_repairs	rpl-private.h	/^  uint16_t root_repairs;$/;"	m	struct:rpl_stats
+route_callback	rpl-dag-root.c	/^route_callback(int event, uip_ipaddr_t *route, uip_ipaddr_t *ipaddr,$/;"	f	file:
+rpl_add_dag	rpl-dag.c	/^rpl_add_dag(uip_ipaddr_t *from, rpl_dio_t *dio)$/;"	f
+rpl_add_parent	rpl-dag.c	/^rpl_add_parent(rpl_dag_t *dag, rpl_dio_t *dio, uip_ipaddr_t *addr)$/;"	f
+rpl_add_route	rpl.c	/^rpl_add_route(rpl_dag_t *dag, uip_ipaddr_t *prefix, int prefix_len,$/;"	f
+rpl_alloc_dag	rpl-dag.c	/^rpl_alloc_dag(uint8_t instance_id, uip_ipaddr_t *dag_id)$/;"	f
+rpl_alloc_instance	rpl-dag.c	/^rpl_alloc_instance(uint8_t instance_id)$/;"	f
+rpl_cancel_dao	rpl-timers.c	/^rpl_cancel_dao(rpl_instance_t *instance)$/;"	f
+rpl_dag	rpl.h	/^struct rpl_dag {$/;"	s
+rpl_dag_init	rpl-dag.c	/^rpl_dag_init(void)$/;"	f
+rpl_dag_root_init	rpl-dag-root.c	/^rpl_dag_root_init(void)$/;"	f
+rpl_dag_root_init_dag	rpl-dag-root.c	/^rpl_dag_root_init_dag(void)$/;"	f
+rpl_dag_root_init_dag_immediately	rpl-dag-root.c	/^rpl_dag_root_init_dag_immediately(void)$/;"	f
+rpl_dag_root_is_root	rpl-dag-root.c	/^rpl_dag_root_is_root(void)$/;"	f
+rpl_dag_t	rpl.h	/^typedef struct rpl_dag rpl_dag_t;$/;"	t	typeref:struct:rpl_dag
+rpl_dio	rpl-private.h	/^struct rpl_dio {$/;"	s
+rpl_dio_t	rpl-private.h	/^typedef struct rpl_dio rpl_dio_t;$/;"	t	typeref:struct:rpl_dio
+rpl_find_of	rpl-dag.c	/^rpl_find_of(rpl_ocp_t ocp)$/;"	f
+rpl_find_parent	rpl-dag.c	/^rpl_find_parent(rpl_dag_t *dag, uip_ipaddr_t *addr)$/;"	f
+rpl_find_parent_any_dag	rpl-dag.c	/^rpl_find_parent_any_dag(rpl_instance_t *instance, uip_ipaddr_t *addr)$/;"	f
+rpl_free_dag	rpl-dag.c	/^rpl_free_dag(rpl_dag_t *dag)$/;"	f
+rpl_free_instance	rpl-dag.c	/^rpl_free_instance(rpl_instance_t *instance)$/;"	f
+rpl_get_any_dag	rpl-dag.c	/^rpl_get_any_dag(void)$/;"	f
+rpl_get_dag	rpl-dag.c	/^rpl_get_dag(const uip_ipaddr_t *addr)$/;"	f
+rpl_get_default_instance	rpl-dag.c	/^rpl_get_default_instance(void)$/;"	f
+rpl_get_instance	rpl-dag.c	/^rpl_get_instance(uint8_t instance_id)$/;"	f
+rpl_get_mode	rpl.c	/^rpl_get_mode(void)$/;"	f
+rpl_get_nbr	rpl-dag.c	/^rpl_get_nbr(rpl_parent_t *parent)$/;"	f
+rpl_get_parent	rpl-dag.c	/^rpl_get_parent(uip_lladdr_t *addr)$/;"	f
+rpl_get_parent_ipaddr	rpl-dag.c	/^rpl_get_parent_ipaddr(rpl_parent_t *p)$/;"	f
+rpl_get_parent_link_metric	rpl-dag.c	/^rpl_get_parent_link_metric(rpl_parent_t *p)$/;"	f
+rpl_get_parent_link_stats	rpl-dag.c	/^rpl_get_parent_link_stats(rpl_parent_t *p)$/;"	f
+rpl_get_parent_lladdr	rpl-dag.c	/^rpl_get_parent_lladdr(rpl_parent_t *p)$/;"	f
+rpl_get_parent_rank	rpl-dag.c	/^rpl_get_parent_rank(uip_lladdr_t *addr)$/;"	f
+rpl_has_downward_route	rpl-dag.c	/^rpl_has_downward_route(void)$/;"	f
+rpl_icmp6_register_handlers	rpl-icmp6.c	/^rpl_icmp6_register_handlers()$/;"	f
+rpl_icmp6_update_nbr_table	rpl-icmp6.c	/^rpl_icmp6_update_nbr_table(uip_ipaddr_t *from, nbr_table_reason_t reason, void *data)$/;"	f
+rpl_init	rpl.c	/^rpl_init(void)$/;"	f
+rpl_instance	rpl.h	/^struct rpl_instance {$/;"	s
+rpl_instance_t	rpl.h	/^typedef struct rpl_instance rpl_instance_t;$/;"	t	typeref:struct:rpl_instance
+rpl_ipv6_neighbor_callback	rpl.c	/^rpl_ipv6_neighbor_callback(uip_ds6_nbr_t *nbr)$/;"	f
+rpl_join_instance	rpl-dag.c	/^rpl_join_instance(uip_ipaddr_t *from, rpl_dio_t *dio)$/;"	f
+rpl_link_neighbor_callback	rpl.c	/^rpl_link_neighbor_callback(const linkaddr_t *addr, int status, int numtx)$/;"	f
+rpl_local_repair	rpl-dag.c	/^rpl_local_repair(rpl_instance_t *instance)$/;"	f
+rpl_metric_container	rpl.h	/^struct rpl_metric_container {$/;"	s
+rpl_metric_container_t	rpl.h	/^typedef struct rpl_metric_container rpl_metric_container_t;$/;"	t	typeref:struct:rpl_metric_container
+rpl_metric_object_energy	rpl.h	/^struct rpl_metric_object_energy {$/;"	s
+rpl_mode	rpl.h	/^enum rpl_mode {$/;"	g
+rpl_move_parent	rpl-dag.c	/^rpl_move_parent(rpl_dag_t *dag_src, rpl_dag_t *dag_dst, rpl_parent_t *parent)$/;"	f
+rpl_mrhof	rpl-mrhof.c	/^rpl_of_t rpl_mrhof = {$/;"	v
+rpl_nbr_policy_find_removable	rpl-nbr-policy.c	/^rpl_nbr_policy_find_removable(nbr_table_reason_t reason,void * data)$/;"	f
+rpl_ns_expire_parent	rpl-ns.c	/^rpl_ns_expire_parent(rpl_dag_t *dag, const uip_ipaddr_t *child, const uip_ipaddr_t *parent)$/;"	f
+rpl_ns_get_node	rpl-ns.c	/^rpl_ns_get_node(const rpl_dag_t *dag, const uip_ipaddr_t *addr)$/;"	f
+rpl_ns_get_node_global_addr	rpl-ns.c	/^rpl_ns_get_node_global_addr(uip_ipaddr_t *addr, rpl_ns_node_t *node)$/;"	f
+rpl_ns_init	rpl-ns.c	/^rpl_ns_init(void)$/;"	f
+rpl_ns_is_node_reachable	rpl-ns.c	/^rpl_ns_is_node_reachable(const rpl_dag_t *dag, const uip_ipaddr_t *addr)$/;"	f
+rpl_ns_node	rpl-ns.h	/^typedef struct rpl_ns_node {$/;"	s
+rpl_ns_node_head	rpl-ns.c	/^rpl_ns_node_head(void)$/;"	f
+rpl_ns_node_next	rpl-ns.c	/^rpl_ns_node_next(rpl_ns_node_t *item)$/;"	f
+rpl_ns_node_t	rpl-ns.h	/^} rpl_ns_node_t;$/;"	t	typeref:struct:rpl_ns_node
+rpl_ns_num_nodes	rpl-ns.c	/^rpl_ns_num_nodes(void)$/;"	f
+rpl_ns_periodic	rpl-ns.c	/^rpl_ns_periodic(void)$/;"	f
+rpl_ns_update_node	rpl-ns.c	/^rpl_ns_update_node(rpl_dag_t *dag, const uip_ipaddr_t *child, const uip_ipaddr_t *parent, uint32_t lifetime)$/;"	f
+rpl_nullify_parent	rpl-dag.c	/^rpl_nullify_parent(rpl_parent_t *parent)$/;"	f
+rpl_ocp_t	rpl.h	/^typedef uint16_t rpl_ocp_t;$/;"	t
+rpl_of	rpl.h	/^struct rpl_of {$/;"	s
+rpl_of0	rpl-of0.c	/^rpl_of_t rpl_of0 = {$/;"	v
+rpl_of_t	rpl.h	/^typedef struct rpl_of rpl_of_t;$/;"	t	typeref:struct:rpl_of
+rpl_parent	rpl.h	/^struct rpl_parent {$/;"	s
+rpl_parent_is_fresh	rpl-dag.c	/^rpl_parent_is_fresh(rpl_parent_t *p)$/;"	f
+rpl_parent_is_reachable	rpl-dag.c	/^rpl_parent_is_reachable(rpl_parent_t *p) {$/;"	f
+rpl_parent_t	rpl.h	/^typedef struct rpl_parent rpl_parent_t;$/;"	t	typeref:struct:rpl_parent
+rpl_parents	rpl.h	/^NBR_TABLE_DECLARE(rpl_parents);$/;"	v
+rpl_prefix	rpl.h	/^struct rpl_prefix {$/;"	s
+rpl_prefix_t	rpl.h	/^typedef struct rpl_prefix rpl_prefix_t;$/;"	t	typeref:struct:rpl_prefix
+rpl_print_neighbor_list	rpl-dag.c	/^rpl_print_neighbor_list(void)$/;"	f
+rpl_process_dio	rpl-dag.c	/^rpl_process_dio(uip_ipaddr_t *from, rpl_dio_t *dio)$/;"	f
+rpl_process_parent_event	rpl-dag.c	/^rpl_process_parent_event(rpl_instance_t *instance, rpl_parent_t *p)$/;"	f
+rpl_process_srh_header	rpl-ext-header.c	/^rpl_process_srh_header(void)$/;"	f
+rpl_purge_dags	rpl.c	/^rpl_purge_dags(void)$/;"	f
+rpl_purge_routes	rpl.c	/^rpl_purge_routes(void)$/;"	f
+rpl_rank_t	rpl.h	/^typedef uint16_t rpl_rank_t;$/;"	t
+rpl_rank_via_parent	rpl-dag.c	/^rpl_rank_via_parent(rpl_parent_t *p)$/;"	f
+rpl_recalculate_ranks	rpl-dag.c	/^rpl_recalculate_ranks(void)$/;"	f
+rpl_remove_header	rpl-ext-header.c	/^rpl_remove_header(void)$/;"	f
+rpl_remove_parent	rpl-dag.c	/^rpl_remove_parent(rpl_parent_t *parent)$/;"	f
+rpl_remove_routes	rpl.c	/^rpl_remove_routes(rpl_dag_t *dag)$/;"	f
+rpl_remove_routes_by_nexthop	rpl.c	/^rpl_remove_routes_by_nexthop(uip_ipaddr_t *nexthop, rpl_dag_t *dag)$/;"	f
+rpl_repair_root	rpl-dag.c	/^rpl_repair_root(uint8_t instance_id)$/;"	f
+rpl_reset_dio_timer	rpl-timers.c	/^rpl_reset_dio_timer(rpl_instance_t *instance)$/;"	f
+rpl_reset_periodic_timer	rpl-timers.c	/^rpl_reset_periodic_timer(void)$/;"	f
+rpl_schedule_dao	rpl-timers.c	/^rpl_schedule_dao(rpl_instance_t *instance)$/;"	f
+rpl_schedule_dao_immediately	rpl-timers.c	/^rpl_schedule_dao_immediately(rpl_instance_t *instance)$/;"	f
+rpl_schedule_probing	rpl-timers.c	/^rpl_schedule_probing(rpl_instance_t *instance)$/;"	f
+rpl_schedule_unicast_dio_immediately	rpl-timers.c	/^rpl_schedule_unicast_dio_immediately(rpl_instance_t *instance)$/;"	f
+rpl_select_dag	rpl-dag.c	/^rpl_select_dag(rpl_instance_t *instance, rpl_parent_t *p)$/;"	f
+rpl_select_parent	rpl-dag.c	/^rpl_select_parent(rpl_dag_t *dag)$/;"	f
+rpl_set_default_instance	rpl-dag.c	/^rpl_set_default_instance(rpl_instance_t *instance)$/;"	f
+rpl_set_default_route	rpl-dag.c	/^rpl_set_default_route(rpl_instance_t *instance, uip_ipaddr_t *from)$/;"	f
+rpl_set_mode	rpl.c	/^rpl_set_mode(enum rpl_mode m)$/;"	f
+rpl_set_preferred_parent	rpl-dag.c	/^rpl_set_preferred_parent(rpl_dag_t *dag, rpl_parent_t *p)$/;"	f	file:
+rpl_set_prefix	rpl-dag.c	/^rpl_set_prefix(rpl_dag_t *dag, uip_ipaddr_t *prefix, unsigned len)$/;"	f
+rpl_set_root	rpl-dag.c	/^rpl_set_root(uint8_t instance_id, uip_ipaddr_t *dag_id)$/;"	f
+rpl_srh_get_next_hop	rpl-ext-header.c	/^rpl_srh_get_next_hop(uip_ipaddr_t *ipaddr)$/;"	f
+rpl_stats	rpl-private.h	/^struct rpl_stats {$/;"	s
+rpl_stats	rpl.c	/^rpl_stats_t rpl_stats;$/;"	v
+rpl_stats_t	rpl-private.h	/^typedef struct rpl_stats rpl_stats_t;$/;"	t	typeref:struct:rpl_stats
+rpl_update_header	rpl-ext-header.c	/^rpl_update_header(void)$/;"	f
+rpl_verify_hbh_header	rpl-ext-header.c	/^rpl_verify_hbh_header(int uip_ext_opt_offset)$/;"	f
+schedule_dao	rpl-timers.c	/^schedule_dao(rpl_instance_t *instance, clock_time_t latency)$/;"	f	file:
+set16	rpl-icmp6.c	/^set16(uint8_t *buffer, int pos, uint16_t value)$/;"	f	file:
+set32	rpl-icmp6.c	/^set32(uint8_t *buffer, int pos, uint32_t value)$/;"	f	file:
+set_dao_lifetime_timer	rpl-timers.c	/^set_dao_lifetime_timer(rpl_instance_t *instance)$/;"	f	file:
+set_global_address	rpl-dag-root.c	/^set_global_address(void)$/;"	f	file:
+set_ip_from_prefix	rpl-dag.c	/^set_ip_from_prefix(uip_ipaddr_t *ipaddr, rpl_prefix_t *prefix)$/;"	f	file:
+should_send_dao	rpl-dag.c	/^should_send_dao(rpl_instance_t *instance, rpl_dio_t *dio, rpl_parent_t *p)$/;"	f	file:
+timer_init	rpl-nbr-policy.c	/^static int timer_init = 0;$/;"	v	file:
+to_become_root	rpl-dag-root.c	/^static uint8_t to_become_root;$/;"	v	file:
+type	rpl.h	/^  uint8_t type;$/;"	m	struct:rpl_metric_container
+uip_create_linklocal_rplnodes_mcast	rpl-private.h	68;"	d
+uip_is_addr_linklocal_rplnodes_mcast	rpl-private.h	54;"	d
+unicast_dio_target	rpl.h	/^  rpl_parent_t *unicast_dio_target;$/;"	m	struct:rpl_instance
+unicast_dio_timer	rpl.h	/^  struct ctimer unicast_dio_timer;$/;"	m	struct:rpl_instance	typeref:struct:rpl_instance::ctimer
+update_hbh_header	rpl-ext-header.c	/^update_hbh_header(void)$/;"	f	file:
+update_metric_container	rpl-mrhof.c	/^update_metric_container(rpl_instance_t *instance)$/;"	f	file:
+update_metric_container	rpl-of0.c	/^update_metric_container(rpl_instance_t *instance)$/;"	f	file:
+update_metric_container	rpl.h	/^  void (*update_metric_container)( rpl_instance_t *);$/;"	m	struct:rpl_of
+update_nbr	rpl-nbr-policy.c	/^update_nbr(void)$/;"	f	file:
+urgent_probing_target	rpl.h	/^  rpl_parent_t *urgent_probing_target;$/;"	m	struct:rpl_instance
+used	rpl.h	/^  uint8_t used;$/;"	m	struct:rpl_dag
+used	rpl.h	/^  uint8_t used;$/;"	m	struct:rpl_instance
+version	rpl-private.h	/^  uint8_t version;$/;"	m	struct:rpl_dio
+version	rpl.h	/^  uint8_t version;$/;"	m	struct:rpl_dag
+worst_rank	rpl-nbr-policy.c	/^static rpl_rank_t worst_rank;$/;"	v	file:
+worst_rank_nbr	rpl-nbr-policy.c	/^static linkaddr_t *worst_rank_nbr; \/* the parent that has the worst rank *\/$/;"	v	file:

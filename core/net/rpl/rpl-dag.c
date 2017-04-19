@@ -98,11 +98,11 @@ rpl_print_neighbor_list(void)
     rpl_parent_t *p = nbr_table_head(rpl_parents);
     clock_time_t clock_now = clock_time();
 
-    printf("RPL: MOP %u OCP %u rank %u dioint %u, nbr count %u\n",
+    PRINTF("RPL: MOP %u OCP %u rank %u dioint %u, nbr count %u\n",
         default_instance->mop, default_instance->of->ocp, curr_rank, curr_dio_interval, uip_ds6_nbr_num());
     while(p != NULL) {
       const struct link_stats *stats = rpl_get_parent_link_stats(p);
-      printf("RPL: nbr %3u %5u, %5u => %5u -- %2u %c%c (last tx %u min ago)\n",
+      PRINTF("RPL: nbr %3u %5u, %5u => %5u -- %2u %c%c (last tx %u min ago)\n",
           rpl_get_parent_ipaddr(p)->u8[15],
           p->rank,
           rpl_get_parent_link_metric(p),
@@ -114,7 +114,7 @@ rpl_print_neighbor_list(void)
       );
       p = nbr_table_next(rpl_parents, p);
     }
-    printf("RPL: end of list\n");
+    PRINTF("RPL: end of list\n");
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -132,6 +132,7 @@ rpl_get_nbr(rpl_parent_t *parent)
 static void
 nbr_callback(void *ptr)
 {
+  PRINTF("nbr callback rpl_remove_parent\n");
   rpl_remove_parent(ptr);
 }
 
@@ -753,7 +754,7 @@ rpl_select_dag(rpl_instance_t *instance, rpl_parent_t *p)
   rpl_parent_t *last_parent;
   rpl_dag_t *dag, *end, *best_dag;
   rpl_rank_t old_rank;
-
+  PRINTF("select-dag ");
   old_rank = instance->current_dag->rank;
   last_parent = instance->current_dag->preferred_parent;
 
@@ -777,6 +778,7 @@ rpl_select_dag(rpl_instance_t *instance, rpl_parent_t *p)
     }
   }
 
+  PRINTF("2select-dag ");
   if(best_dag == NULL) {
     /* No parent found: the calling function handle this problem. */
     return NULL;
@@ -803,6 +805,7 @@ rpl_select_dag(rpl_instance_t *instance, rpl_parent_t *p)
     instance->current_dag = best_dag;
   }
 
+  PRINTF("3select-dag ");
   instance->of->update_metric_container(instance);
   /* Update the DAG rank. */
   best_dag->rank = rpl_rank_via_parent(best_dag->preferred_parent);
@@ -882,7 +885,10 @@ best_parent(rpl_dag_t *dag, int fresh_only)
 
     /* Now we have an acceptable parent, check if it is the new best */
     best = of->best_parent(best, p);
+   if (best ==NULL) PRINTF("BEST \n");   
+
   }
+  
 
   return best;
 }
@@ -948,6 +954,7 @@ rpl_nullify_parent(rpl_parent_t *parent)
         PRINTF("RPL: Removing default route ");
         PRINT6ADDR(rpl_get_parent_ipaddr(parent));
         PRINTF("\n");
+        printf ("rpl_nullify_parent uip_ds6_defrt_rm\n");
         uip_ds6_defrt_rm(dag->instance->def_route);
         dag->instance->def_route = NULL;
       }
@@ -1334,11 +1341,12 @@ rpl_recalculate_ranks(void)
    * than RPL protocol messages. This periodical recalculation is called
    * from a timer in order to keep the stack depth reasonably low.
    */
+      PRINTF("RPL: rpl_process_parent_event recalculate_ranks\n");
   p = nbr_table_head(rpl_parents);
   while(p != NULL) {
     if(p->dag != NULL && p->dag->instance && (p->flags & RPL_PARENT_FLAG_UPDATED)) {
       p->flags &= ~RPL_PARENT_FLAG_UPDATED;
-      PRINTF("RPL: rpl_process_parent_event recalculate_ranks\n");
+      PRINTF("RPL: rpl_process_parent_event recalculate_ranks...\n");
       if(!rpl_process_parent_event(p->dag->instance, p)) {
         PRINTF("RPL: A parent was dropped\n");
       }
@@ -1352,6 +1360,8 @@ rpl_process_parent_event(rpl_instance_t *instance, rpl_parent_t *p)
 {
   int return_value;
   rpl_parent_t *last_parent = instance->current_dag->preferred_parent;
+
+    PRINTF("RPL: rpl_process_parent_event ");
 
 #if DEBUG
   rpl_rank_t old_rank;
@@ -1393,7 +1403,7 @@ rpl_process_parent_event(rpl_instance_t *instance, rpl_parent_t *p)
 
 #if DEBUG
   if(DAG_RANK(old_rank, instance) != DAG_RANK(instance->current_dag->rank, instance)) {
-    PRINTF("RPL: Moving in the instance from rank %hu to %hu\n",
+    PRINTF("RPL: Moving in the instance from rank %u to %u\n",
 	   DAG_RANK(old_rank, instance), DAG_RANK(instance->current_dag->rank, instance));
     if(instance->current_dag->rank != INFINITE_RANK) {
       PRINTF("RPL: The preferred parent is ");
@@ -1536,7 +1546,9 @@ rpl_process_dio(uip_ipaddr_t *from, rpl_dio_t *dio)
   /* The DIO comes from a valid DAG, we can refresh its lifetime */
   dag->lifetime = (1UL << (instance->dio_intmin + instance->dio_intdoubl)) / 1000;
   PRINTF("Set dag ");
-  PRINT6ADDR(&dag->dag_id);
+  PRINT6ADDR(&dag->dag_id); 
+  PRINTF("From ");
+  PRINT6ADDR(&from);
   PRINTF(" lifetime to %ld\n", dag->lifetime);
 
   /*

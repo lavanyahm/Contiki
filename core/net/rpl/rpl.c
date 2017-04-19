@@ -50,7 +50,9 @@
 #include "net/rpl/rpl-ns.h"
 #include "net/ipv6/multicast/uip-mcast6.h"
 
+
 #define DEBUG DEBUG_NONE
+
 #include "net/ip/uip-debug.h"
 
 #include <limits.h>
@@ -279,7 +281,7 @@ rpl_ipv6_neighbor_callback(uip_ds6_nbr_t *nbr)
   rpl_instance_t *instance;
   rpl_instance_t *end;
 
-  PRINTF("RPL: Neighbor state changed for ");
+  PRINTF("RPL: Neighbor state changed for... ");
   PRINT6ADDR(&nbr->ipaddr);
 #if UIP_ND6_SEND_NA || UIP_ND6_SEND_RA
   PRINTF(", nscount=%u, state=%u\n", nbr->nscount, nbr->state);

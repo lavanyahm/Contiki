@@ -92,6 +92,8 @@ handle_periodic_timer(void *ptr)
       rpl_ns_periodic();
     }
   }
+
+  PRINTF("handle_periodic_timer : rpl_recalculate_ranks ");
   rpl_recalculate_ranks();
 
   /* handle DIS */

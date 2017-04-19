@@ -38,7 +38,8 @@
 #define DEBUG DEBUG_PRINT
 #include "net/ip/uip-debug.h"
 
-#define SEND_INTERVAL		15 * CLOCK_SECOND
+#define SEND_INTERVAL	 1 * CLOCK_SECOND
+#define INIT_INTERVAL	 60 * CLOCK_SECOND
 #define MAX_PAYLOAD_LEN		40
 
 static struct uip_udp_conn *client_conn;
@@ -54,7 +55,7 @@ tcpip_handler(void)
   if(uip_newdata()) {
     str = uip_appdata;
     str[uip_datalen()] = '\0';
-    printf("Response from the server: '%s'\n", str);
+   // PRINTF("Response from the server: '%s'\n", str);
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -62,16 +63,17 @@ static char buf[MAX_PAYLOAD_LEN];
 static void
 timeout_handler(void)
 {
-  static int seq_id;
-
-  printf("Client sending to: ");
+  static int seq_id=0;
+  seq_id++;
+  PRINTF("\nClient_sendingHello %d to ",seq_id);
   PRINT6ADDR(&client_conn->ripaddr);
-  sprintf(buf, "Hello %d from the client", ++seq_id);
-  printf(" (msg: %s)\n", buf);
+  PRINTF("\n");
+  sprintf(buf, "Hello %d from the client",seq_id);
+//  PRINTF(" (msg: %s)\n", buf);
 #if SEND_TOO_LARGE_PACKET_TO_TEST_FRAGMENTATION
   uip_udp_packet_send(client_conn, buf, UIP_APPDATA_SIZE);
 #else /* SEND_TOO_LARGE_PACKET_TO_TEST_FRAGMENTATION */
-  uip_udp_packet_send(client_conn, buf, strlen(buf));
+  uip_udp_packet_send(client_conn, buf, sizeof(buf));
 #endif /* SEND_TOO_LARGE_PACKET_TO_TEST_FRAGMENTATION */
 }
 /*---------------------------------------------------------------------------*/
@@ -107,13 +109,18 @@ set_global_address(void)
 static resolv_status_t
 set_connection_address(uip_ipaddr_t *ipaddr)
 {
+
+//#define UDP_CONNECTION_ADDR       aaaa::200:0:0:a
+#define UDP_CONNECTION_ADDR       fd00:0:0:0:c30c:0:0:b
+
 #ifndef UDP_CONNECTION_ADDR
 #if RESOLV_CONF_SUPPORTS_MDNS
 #define UDP_CONNECTION_ADDR       contiki-udp-server.local
 #elif UIP_CONF_ROUTER
 #define UDP_CONNECTION_ADDR       fd00:0:0:0:0212:7404:0004:0404
 #else
-#define UDP_CONNECTION_ADDR       fe80:0:0:0:6466:6666:6666:6666
+//#define UDP_CONNECTION_ADDR       fe80:0:0:0:6466:6666:6666:6666
+#define UDP_CONNECTION_ADDR        fd00:0:0:0:0200:0:0:2
 #endif
 #endif /* !UDP_CONNECTION_ADDR */
 
@@ -147,7 +154,8 @@ set_connection_address(uip_ipaddr_t *ipaddr)
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(udp_client_process, ev, data)
 {
-  static struct etimer et;
+  static struct etimer et,inittime;
+ 
   uip_ipaddr_t ipaddr;
 
   PROCESS_BEGIN();
@@ -180,10 +188,14 @@ PROCESS_THREAD(udp_client_process, ev, data)
   PRINTF(" local/remote port %u/%u\n",
 	UIP_HTONS(client_conn->lport), UIP_HTONS(client_conn->rport));
 
-  etimer_set(&et, SEND_INTERVAL);
+  etimer_set(&et, SEND_INTERVAL/2);
+  etimer_set(&inittime, INIT_INTERVAL);
   while(1) {
     PROCESS_YIELD();
+ 
+   PROCESS_WAIT_UNTIL(etimer_expired(&inittime));
     if(etimer_expired(&et)) {
+    
       timeout_handler();
       etimer_restart(&et);
     } else if(ev == tcpip_event) {
